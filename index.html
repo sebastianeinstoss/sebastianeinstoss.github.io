@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sebastian Einstoss | NYU Politics</title>
+<meta name="description" content="Sebastian Einstoss is a first-year PhD student in Politics at New York University. Research on political economy, political violence, gender, and comparative politics.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --text:#24262b;
+  --muted:#5c6066;
+  --bg:#ffffff;
+  --rule:#dcdde0;
+  --violet:#57068c;       /* NYU violet */
+  --violet-dark:#3d0463;
+  --sidebar-w:300px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{
+  font-family:"IBM Plex Sans",Helvetica,Arial,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  font-size:16px;
+  line-height:1.7;
+}
+a{color:var(--violet);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+a:hover{color:var(--violet-dark)}
+a:focus-visible{outline:2px solid var(--violet);outline-offset:2px}
+
+.layout{
+  display:grid;
+  grid-template-columns:var(--sidebar-w) 1fr;
+  max-width:1060px;
+  margin:0 auto;
+  min-height:100vh;
+}
+
+/* ---------- Sidebar ---------- */
+.sidebar{
+  border-right:1px solid var(--rule);
+  padding:56px 36px 40px 28px;
+}
+.sidebar-inner{position:sticky;top:56px}
+.sidebar h1{
+  font-family:"IBM Plex Serif",Georgia,serif;
+  font-weight:600;
+  font-size:1.55rem;
+  line-height:1.25;
+  margin-bottom:4px;
+}
+.sidebar .affil{
+  font-size:.9rem;
+  color:var(--muted);
+  margin-bottom:24px;
+  line-height:1.5;
+}
+.sidebar .affil b{color:var(--text);font-weight:500}
+.sidebar img{
+  width:100%;
+  max-width:220px;
+  display:block;
+  margin-bottom:24px;
+  filter:grayscale(12%);
+}
+.side-nav{list-style:none;margin-bottom:28px;border-top:1px solid var(--rule)}
+.side-nav li{border-bottom:1px solid var(--rule)}
+.side-nav a{
+  display:block;
+  padding:9px 2px;
+  text-decoration:none;
+  color:var(--text);
+  font-size:.92rem;
+  font-weight:500;
+}
+.side-nav a:hover{color:var(--violet);padding-left:6px;transition:padding .12s,color .12s}
+.side-contact{font-size:.88rem;color:var(--muted)}
+.side-contact div{margin-bottom:6px}
+
+/* ---------- Main ---------- */
+main{padding:56px 24px 70px 52px;max-width:660px}
+section{margin-bottom:64px}
+section h2{
+  font-family:"IBM Plex Serif",Georgia,serif;
+  font-weight:600;
+  font-size:1.3rem;
+  padding-bottom:8px;
+  margin-bottom:22px;
+  border-bottom:2px solid var(--text);
+}
+p{margin-bottom:16px}
+.lede{font-size:1.05rem}
+.muted{color:var(--muted)}
+
+h3.group{
+  font-size:.8rem;
+  font-weight:600;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin:30px 0 14px;
+}
+section h3.group:first-of-type{margin-top:0}
+
+/* Papers as a reference list — like a real CV */
+.pub{margin-bottom:26px;padding-left:18px;border-left:3px solid var(--rule)}
+.pub-title{
+  font-weight:600;
+  font-size:1.02rem;
+  line-height:1.45;
+  margin-bottom:2px;
+}
+.pub-venue{font-size:.9rem;color:var(--muted);font-style:italic;margin-bottom:8px}
+.pub p.abstract{font-size:.93rem;color:var(--muted);margin:8px 0 0}
+.pub details summary{
+  cursor:pointer;
+  display:inline;
+  font-size:.86rem;
+  font-weight:500;
+  color:var(--violet);
+  text-decoration:underline;
+  text-decoration-thickness:1px;
+  text-underline-offset:3px;
+}
+.pub .plinks{font-size:.86rem;margin-top:8px}
+.pub .plinks a{margin-right:14px;font-weight:500}
+
+ul.plain{list-style:none}
+ul.plain li{
+  padding:10px 0 10px 18px;
+  border-left:3px solid var(--rule);
+  margin-bottom:10px;
+  font-weight:500;
+  font-size:1.02rem;
+  line-height:1.45;
+}
+
+.cvline{
+  border:1px solid var(--rule);
+  padding:18px 22px;
+  font-size:.95rem;
+  background:#fafafa;
+}
+.cvline a{font-weight:600}
+
+footer{
+  font-size:.82rem;
+  color:var(--muted);
+  border-top:1px solid var(--rule);
+  padding-top:20px;
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width:840px){
+  .layout{grid-template-columns:1fr}
+  .sidebar{
+    border-right:none;
+    border-bottom:1px solid var(--rule);
+    padding:36px 24px 28px;
+  }
+  .sidebar-inner{position:static}
+  .sidebar img{max-width:160px}
+  .side-nav{display:flex;flex-wrap:wrap;border-top:none;margin-bottom:20px}
+  .side-nav li{border-bottom:none;margin-right:18px}
+  .side-nav a{padding:4px 0;text-decoration:underline;text-underline-offset:3px}
+  .side-nav a:hover{padding-left:0}
+  main{padding:40px 24px 56px}
+}
+</style>
+</head>
+<body>
+
+<div class="layout">
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+      <h1>Sebastian Einstoss</h1>
+      <p class="affil">PhD Student, <b>Department of Politics</b><br>New York University</p>
+      <img src="photo.jpg" alt="Sebastian Einstoss" onerror="this.style.display='none'">
+      <ul class="side-nav">
+        <li><a href="#about">About</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#public-sector">Public Sector Experience</a></li>
+        <li><a href="#cv">Curriculum Vitae</a></li>
+      </ul>
+      <div class="side-contact">
+        <div><a href="mailto:sne3226@nyu.edu">sne3226@nyu.edu</a></div>
+        <div>New York, NY</div>
+      </div>
+    </div>
+  </aside>
+
+  <main>
+
+    <section id="about">
+      <h2>About</h2>
+      <p class="lede">I am a first-year PhD student in Politics at New York University.</p>
+      <p>I received my BA in Economics from the University of Buenos Aires in 2020 and my MA in Economics from the Universidad de San Andrés in 2021. At San Andrés, I worked as a Lecturer, Teaching Assistant, and Pre-Doctoral Fellow.</p>
+      <p>In 2024–2025, I served as an advisor at Argentina's Ministry of Deregulation and State Transformation, working closely with Minister Federico Sturzenegger on policy design and implementation.</p>
+      <p>My research interests lie at the intersection of political economy, political violence, gender, and comparative politics.</p>
+    </section>
+
+    <section id="research">
+      <h2>Research</h2>
+
+      <h3 class="group">Working Papers</h3>
+      <div class="pub">
+        <p class="pub-title">"Todo está guardado en la memoria": The Aftermath of State Violence in Argentina</p>
+        <p class="pub-venue">Young Researchers Working Papers, Universidad de San Andrés</p>
+        <details>
+          <summary>Abstract</summary>
+          <p class="abstract">Can the memorials honoring the victims of state violence influence present-day elections? This paper examines a natural experiment within the Argentinean electoral system to investigate the causal link between one type of memorial and current electoral outcomes. The results show that the presence of "Baldosas por la memoria" (tiles commemorating victims of the 1976–1983 military dictatorship in Argentina) is associated with a significant drop in null votes. Furthermore, my findings suggest that these monuments could be leveraged to impact a particular right-wing political party. The hypothesis behind this result is that these tiles produce a revitalizing effect on the perceived importance of democracy.</p>
+        </details>
+        <p class="plinks"><a href="https://ideas.repec.org/p/sad/ypaper/14.html" target="_blank" rel="noopener">Working paper (RePEc)</a></p>
+      </div>
+
+      <h3 class="group">Work in Progress</h3>
+      <ul class="plain">
+        <li>Military Service and Electoral Behavior: Evidence from the 1952 Cohort in Argentina</li>
+        <li>The Enduring Impact of Political Violence on Electoral Outcomes in Argentina</li>
+      </ul>
+    </section>
+
+    <section id="public-sector">
+      <h2>Public Sector Experience</h2>
+      <p>During 2024 and 2025, I served as one of the main advisors to Minister Federico Sturzenegger at the Ministry of Deregulation and State Transformation. In this role, I was responsible for analyzing, designing, and implementing institutional reforms aimed at reducing bureaucracy in Argentina.</p>
+      <p>My work covered areas such as Energy, Health, Bureaucracy, Pharmaceuticals, Infrastructure, Foreign Trade, and Transportation. Over this period, I drafted seven published presidential decrees and more than ten resolutions related to these issues.</p>
+    </section>
+
+    <section id="cv">
+      <h2>Curriculum Vitae</h2>
+      <p class="cvline">My full CV is available here: <a href="cv.pdf">Download CV (PDF)</a></p>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Sebastian Einstoss · Department of Politics, New York University
+    </footer>
+
+  </main>
+
+</div>
+
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+
+</body>
+</html>
